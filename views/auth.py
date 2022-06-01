@@ -21,6 +21,6 @@ class AuthView(Resource):
 
     def put(self):
         req_json = request.json
-        token = req_json.get('refrash_token')
+        token = req_json.get('refresh_token')
         tokens = auth_service.approve_reflash_token(token)
         return tokens, 201

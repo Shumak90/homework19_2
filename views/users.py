@@ -17,9 +17,6 @@ class UserView(Resource):
         return "", 201
 
     def put(self):
-        req_json = request.json
-        token = req_json.get('refrash_token')
-        tokens = auth_
-
+        pass
 
 

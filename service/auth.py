@@ -37,8 +37,8 @@ class AuthService:
 
         return tokens
 
-    def approve_reflash_token(self, reflesh_token):
-        data = jwt.decode(jwt=reflesh_token, key=SECRET_KEY, algorithms=ALGORITM)
+    def approve_reflash_token(self, refresh_token):
+        data = jwt.decode(jwt=refresh_token, key=SECRET_KEY, algorithms=ALGORITM)
         username = data['username']
 
         user = self.user_service.get_one_username(username)
